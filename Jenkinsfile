@@ -15,6 +15,9 @@ node{
     }
     
     stage('Build'){
+        def M2_HOME=tool name: 'M2_HOME', type: 'maven'
+      def mvnBIN= "${M2_HOME}/bin"
+        
       if(isUnix()){
           sh 'mvn clean package'
       }else{
