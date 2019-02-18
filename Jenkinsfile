@@ -12,7 +12,8 @@ node{
     def M2_HOME=tool name: 'M2_HOME', type: 'maven'
       def mvnBIN= "${M2_HOME}/bin"
     
-    stage('CheckOutCode'){
+    stage('CheckOutCode'){git branch: 'development', credentialsId: '0c177fda-611a-4435-a25b-f58c9c609800', url: 'https://github.com/naveena2/maven-web-application.git'
+        
     
     }
     
