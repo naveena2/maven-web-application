@@ -13,7 +13,7 @@ node{
       def mvnBIN= "${M2_HOME}/bin"
     
     stage('CheckOutCode'){
-        git branch: 'development', credentialsId: 'e36e58e1-2845-4868-92b2-aae7fcf88927', url: 'https://github.com/MithunTechnologiesDevOps/maven-web-application.git'
+    
     }
     
     stage('Build'){
