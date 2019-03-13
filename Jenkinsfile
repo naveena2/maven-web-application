@@ -18,7 +18,7 @@ node{
       def M2_HOME=tool name: 'M2_HOME', type: 'maven'
       def mvnBIN= "${M2_HOME}/bin"
         
-      if(isUnix()){
+      if(isLinux()){
           sh 'mvn clean package'
       }else{
           bat 'mvn clean package'
@@ -26,7 +26,7 @@ node{
     }
     /*
     stage('SonarQubeReport'){
-      if(isUnix()){
+      if(isLinunx()){
           sh 'mvn  sonar:sonar'
       }else{
           bat 'mvn sonar:sonar'
@@ -34,7 +34,7 @@ node{
     }
     
      stage('UploadintoNexus'){
-      if(isUnix()){
+      if(isLinux()){
           sh 'mvn  deploy'
       }else{
           bat 'mvn deploy'
