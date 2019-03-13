@@ -11,11 +11,11 @@ properties([
 node{
     
     stage('CheckOutCode'){
-       
+      git branch: 'development', credentialsId: '148f7598-1c70-4697-aa87-15fe14bf2032', url: 'https://github.com/naveena2/maven-web-application.git' 
     }
     
     stage('Build'){
-        def M2_HOME=tool name: 'M2_HOME', type: 'maven'
+      def M2_HOME=tool name: 'M2_HOME', type: 'maven'
       def mvnBIN= "${M2_HOME}/bin"
         
       if(isUnix()){
